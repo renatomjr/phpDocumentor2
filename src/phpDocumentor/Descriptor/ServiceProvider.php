@@ -237,7 +237,6 @@ class ServiceProvider implements ServiceProviderInterface
         /** @var ClassMetadata $methodMetadata */
         $methodMetadata    = $validator->getMetadataFor('phpDocumentor\Descriptor\MethodDescriptor');
 
-        $fileMetadata->addPropertyConstraint('summary', new Assert\NotBlank(array('message' => 'PPC:ERR-50000')));
         $classMetadata->addPropertyConstraint('summary', new Assert\NotBlank(array('message' => 'PPC:ERR-50005')));
         $propertyMetadata->addConstraint(new phpDocAssert\Property\HasSummary());
         $methodMetadata->addPropertyConstraint('summary', new Assert\NotBlank(array('message' => 'PPC:ERR-50008')));
